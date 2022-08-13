@@ -59,6 +59,11 @@ const topluGuncelleme = (event) => {
         <input name="site" onChange={topluGuncelleme} type="text" />
         {formalanlari?.site?.length}
       </div>
+      <div>
+        <p>Mesajınız:</p>
+        <textarea name="mesaj" onChange={topluGuncelleme} type="text" />
+        {formalanlari?.mesaj?.length}
+      </div>
       <button type="submit">Gönder</button>
     </form>
     </>
