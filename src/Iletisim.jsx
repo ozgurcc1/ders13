@@ -10,24 +10,27 @@ const topluGuncelleme = (event) => {
 
   const formGonder = (olay) =>{
     olay.preventDefault();//formun tarayıcı tarafından gönderim işlemi durduruluyor.
-    
+  if(!formalanlari.isim || formalanlari.isim.length < 2){
+    alert("İsim uzunluğu 2'ten küçük olamaz.")
+    return;
+  }
 
-    if(formalanlari.isim.length > 10){
+    if(formalanlari.isim?.length > 10){
       alert("İsim uzunluğu 10 dan büyük olamaz")
 
       return;
     }
 
-    if(formalanlari.soyisim.length > 10){
+    if(formalanlari.soyisim?.length > 10){
       alert("Soyisim uzunluğu 10 dan büyük olamaz")
       return;
     }
 
-    if(formalanlari.telefon.length > 10){
+    if(formalanlari.telefon?.length > 10){
       alert("Telefon uzunluğu 10 dan büyük olamaz")
       return;
     }
-    if(formalanlari.site.length > 10){
+    if(formalanlari.site?.length > 10){
       alert("Site uzunluğu 100 dan büyük olamaz")
       return;
     }
@@ -60,10 +63,19 @@ const topluGuncelleme = (event) => {
         {formalanlari?.site?.length}
       </div>
       <div>
+        <p>Bizi Nereden duydunuz?</p>
+        <select name="neredenduyuldu" onChange={topluGuncelleme}>
+        <option value="Google">Google</option>
+        <option value="Arkadaslar">Arkadaslar</option>
+        <option value="Instagram">Instagram</option>
+      </select>
+      </div>
+      <div>
         <p>Mesajınız:</p>
         <textarea name="mesaj" onChange={topluGuncelleme} type="text" />
         {formalanlari?.mesaj?.length}
       </div>
+     
       <button type="submit">Gönder</button>
     </form>
     </>
