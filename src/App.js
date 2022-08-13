@@ -1,13 +1,15 @@
-
+import Iletisim from "./Iletisim";
 
 function App() {
 
-  
   return (
    <>
-   
-   <p>Merhaba</p>
+   <p>Merhaba!</p>
+     <Iletisim />
    </>
+   
+     
+   
   );
 }
 
