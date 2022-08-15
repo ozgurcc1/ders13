@@ -23,3 +23,12 @@ footer{
   background-color:rgb(103,103,0);
   height:100px;
 }
+
+nav a{
+  color:white;
+  padding:5px;
+  text-decoration: none;
+  border:1px solid red;
+  margin:5px;
+
+}
