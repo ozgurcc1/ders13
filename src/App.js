@@ -17,11 +17,12 @@ function App() {
    <section>
       <p>İçerik Bölgesi</p>
       <Routes>
-      <Route path="/" element={<AnaEkran />} />
+        <Route>
+      <Route index element={<AnaEkran />} />
       <Route path="/ekran1" element={<Ekran1 />} />
       <Route path="/ekran2" element={<Ekran2 />} />
       <Route path="*" element={<Bulunamadi />} />
-        
+      </Route>
 
         
       </Routes>
