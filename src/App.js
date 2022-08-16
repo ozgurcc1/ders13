@@ -16,16 +16,26 @@ function App() {
 
    <section>
       <p>İçerik Bölgesi</p>
+
+
       <Routes>
-        <Route>
+        <Route path="/">
       <Route index element={<AnaEkran />} />
       <Route path="/ekran1" element={<Ekran1 />} />
       <Route path="/ekran2" element={<Ekran2 />} />
-      <Route path="*" element={<Bulunamadi />} />
-      </Route>
+      
 
-        
+      <Route path="/kategori" >
+      <Route path="kadin" element={<Ekran1 />} />
+      <Route path="erkek" element={<Ekran2 />} />
+      </Route>
+      <Route path="*" element={<Bulunamadi />} />
+        </Route>
       </Routes>
+
+      
+
+
     </section>
 
     <footer>
